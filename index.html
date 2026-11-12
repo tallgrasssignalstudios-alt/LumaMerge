@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Luma Merge – Tallgrass Signal Studios</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Terms -->
+  <div id="terms-screen" class="overlay">
+    <div class="panel">
+      <h1>Luma Merge</h1>
+      <p class="credit">A Tallgrass Signal Studios game</p>
+      <div class="terms-box">
+        <p>By continuing you accept the Terms of Service.</p>
+        <ul>
+          <li>Progress is saved locally (and later to the cloud).</li>
+          <li>Two modes feel like separate games in one app.</li>
+          <li>Ads are optional and limited.</li>
+        </ul>
+        <p class="small">Support: tallgrasssignalstudios@gmail.com</p>
+      </div>
+      <label class="checkbox">
+        <input type="checkbox" id="terms-check" />
+        I accept the Terms
+      </label>
+      <button id="accept-terms" class="btn primary" disabled>Accept & Continue</button>
+    </div>
+  </div>
+
+  <!-- Home -->
+  <div id="home-screen" class="overlay hidden">
+    <div class="panel home-panel">
+      <h1>Luma Merge</h1>
+      <p class="credit">A Tallgrass Signal Studios game</p>
+      <div class="mode-cards">
+        <button id="play-infinite" class="mode-card">
+          <span class="mode-title">Infinite Mode</span>
+          <span class="mode-desc">Endless • Rising challenge • Big rewards • Risk of loss</span>
+        </button>
+        <button id="play-campaign" class="mode-card">
+          <span class="mode-title">Campaign Mode</span>
+          <span class="mode-desc">Long journey • Biomes • Upgrades • Year-scale progression</span>
+        </button>
+      </div>
+      <p class="small" style="margin-top:1.2rem">Each mode saves progress separately.</p>
+    </div>
+  </div>
+
+  <!-- Game -->
+  <div id="game" class="hidden">
+    <header>
+      <button id="mode-switch" class="mode-tab">Campaign Mode</button>
+      <div class="stats"><span id="lumens">0</span> Lumens</div>
+    </header>
+    <div id="hud">
+      <div id="run-info">
+        <span id="mode-label">Infinite</span>
+        <span id="difficulty">Diff 1</span>
+        <span id="lives">♥ 3</span>
+      </div>
+      <div id="message"></div>
+    </div>
+    <main><div id="board"></div></main>
+    <footer>
+      <button id="btn-merge" class="btn primary">Merge</button>
+      <button id="btn-boost" class="btn">Boost</button>
+      <button id="btn-home" class="btn text">Home</button>
+    </footer>
+  </div>
+
+  <div id="celebration" class="celebration hidden"><div id="big-text">LUMA!</div></div>
+
+  <div id="gameover" class="overlay hidden">
+    <div class="panel">
+      <h2>Run Over</h2>
+      <p id="go-stats"></p>
+      <button id="btn-retry" class="btn primary">Try Again</button>
+      <button id="btn-go-home" class="btn">Home</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
